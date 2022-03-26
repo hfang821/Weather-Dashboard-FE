@@ -1,0 +1,21 @@
+header {
+    padding: 0px 540px;
+    background-color: antiquewhite;
+}
+
+header h1 {
+    margin: 0px 120px;
+}
+
+.flex-row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.justify-space-between {
+    justify-content: space-between;
+}
+
+.btn {
+    display: block;
+}

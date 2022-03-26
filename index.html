@@ -4,9 +4,59 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="style.css" />
     <title>Weather-Dashboard</title>
 </head>
 <body>
+    <header class="hero">
+    <h1>Weather Dashboard</h1>    
+    </header>
+
+    <main class="flex-row justify-space-between">
+
+    <!--City Search Section-->
+    <div class="col-12 col-md-4">
+        <!--Search By City-->
+        <form>
+            <h2>Search for a City</h2>
+            <input/>
+            <button>Search</button>
+        </form>
+        <!--City Selection by Buttons-->
+        <div>
+            <button class="btn">Toronto</button>
+            <button class="btn">London</button>
+            <button class="btn">Montreal</button>
+            <button class="btn">Calgary</button>
+            <button class="btn">Vancouver</button>
+            <button class="btn">Winnipeg</button>
+            <button class="btn">Halifax</button>
+            <button class="btn">Edmonton</button>
+        </div>
+    </div>
+
+    <!--Weather information shown here-->
+    <div class="col-12 col-md-8">
+        <!--Weather for that city-->
+        <div>
+
+        </div>
+        <!--5 Day Forecast-->
+        <div>
+
+        </div>
+
+    </div>
+
+
+    </main>
+
+
+
     
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="./script.js"></script>
 </body>
 </html>
