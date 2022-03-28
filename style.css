@@ -19,3 +19,24 @@ header h1 {
 .btn {
     display: block;
 }
+
+/* CARDS */
+.card {
+    display: inline-block;
+    background-color: steelblue;
+    border: 3px solid var(--dark);
+    padding: 96px 76px;
+    border-radius: var(--border-radius);
+    margin: 52px 43px 23px 0;
+}
+
+.city-card {
+    border: 3px solid var(--dark);
+    padding: 149px 21px;
+    border-radius: var(--border-radius);
+    margin: 40px 0 0 0;
+}
+
+.card-header {
+
+}

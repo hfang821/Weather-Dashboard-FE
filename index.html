@@ -16,12 +16,12 @@
     <main class="flex-row justify-space-between">
 
     <!--City Search Section-->
-    <div class="col-12 col-md-4">
+    <div class="col-12 col-md-3">
         <!--Search By City-->
-        <form>
+        <form id="user-search">
             <h2>Search for a City</h2>
-            <input/>
-            <button>Search</button>
+            <input id="cityname"/>
+            <button id="searchbtn">Search</button>
         </form>
         <!--City Selection by Buttons-->
         <div>
@@ -37,26 +37,43 @@
     </div>
 
     <!--Weather information shown here-->
-    <div class="col-12 col-md-8">
+    <div class="col-12 col-md-9">
         <!--Weather for that city-->
-        <div>
-
+        <div class="city-card">
+            <h2 id="city-name">Toronto</h2>
+            <p id="temp">Temp: </p> 
+            <br><br>
+            <p id="wind">Wind: </p>
+            <br><br>
+            <p id="humid">Humidity: </p>
+            <br><br>
+            <p id="uv">UV Index: </p>
         </div>
         <!--5 Day Forecast-->
         <div>
-
+            <div class="card">
+                <h3 class="card-header"></h3>
+            </div>
+            <div class="card">
+                <h3 class="card-header"></h3>
+            </div>
+            <div class="card">
+                <h3 class="card-header"></h3>
+            </div>
+            <div class="card">
+                <h3 class="card-header"></h3>
+            </div>
+            <div class="card">
+                <h3 class="card-header"></h3>
+            </div>
         </div>
 
     </div>
-
-
     </main>
 
-
-
-    
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="./citylist.js"></script>
     <script src="./script.js"></script>
 </body>
 </html>
