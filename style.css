@@ -1,10 +1,19 @@
 header {
-    padding: 0px 540px;
-    background-color: antiquewhite;
+    background-color: skyblue;
 }
 
-header h1 {
-    margin: 0px 120px;
+form {
+    display: grid;
+}
+
+#citybtns {
+    margin-top: 30px;
+    border-top: 2px solid black;
+}
+
+#datetime {
+    font-size: 2rem;
+    display: flex;
 }
 
 .flex-row {
@@ -18,4 +27,40 @@ header h1 {
 
 .btn {
     display: block;
+    margin: 20px 0;
+}
+
+/* CARDS */
+.card {
+    display: inline-block;
+    background-color: skyblue;
+    border: 3px solid var(--dark);
+    padding: 48px 63px;
+    border-radius: var(--border-radius);
+    margin: 52px 22px 23px 58px;
+}
+
+.city-card {
+    border: 3px solid var(--dark);
+    padding: 15px 21px;
+    border-radius: var(--border-radius);
+    margin: 48px 21px;
+}
+
+.favorable {
+    color: white;
+    background-color: green;
+    border-radius: 10px;
+}
+
+.moderate {
+    color: white;
+    background-color: yellow;
+    border-radius: 10px;
+}
+
+.severe {
+    color: white;
+    background-color: red;
+    border-radius: 10px;
 }
