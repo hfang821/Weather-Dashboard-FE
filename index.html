@@ -9,50 +9,72 @@
     <title>Weather-Dashboard</title>
 </head>
 <body>
-    <header class="hero">
+    <header class="text-center">
     <h1>Weather Dashboard</h1>    
     </header>
 
     <main class="flex-row justify-space-between">
 
     <!--City Search Section-->
-    <div class="col-12 col-md-3">
+    <div class="col-12 col-md-2">
         <!--Search By City-->
         <form id="user-search">
             <h2>Search for a City</h2>
-            <input id="cityname"/>
-            <button id="searchbtn">Search</button>
+            <input list="browsers" id="cityname"/>
+            <datalist id="browsers">
+                <option value="Toronto">
+                <option value="London">
+                <option value="Montreal">
+                <option value="Calgary">
+                <option value="Vancouver">
+                <option value="Winnipeg">
+                <option value="Halifax">
+                <option value="Edmonton">
+                <option value="New York">
+                <option value="Chicago">
+                <option value="Shanghai">
+                <option value="Beijing">
+                <option value="Tokyo">
+                <option value="Hawaii">
+                <option value="Miami">
+                <option value="Ottawa">
+                <option value="Windsor">
+            </datalist>
+            <button class="btn-primary" id="searchbtn">Search</button>
         </form>
         <!--City Selection by Buttons-->
-        <div>
-            <button class="btn">Toronto</button>
-            <button class="btn">London</button>
-            <button class="btn">Montreal</button>
-            <button class="btn">Calgary</button>
-            <button class="btn">Vancouver</button>
-            <button class="btn">Winnipeg</button>
-            <button class="btn">Halifax</button>
-            <button class="btn">Edmonton</button>
+        <div id="citybtns">
+            <button class="btn btn-secondary btn-block" city-name="toronto">Toronto</button>
+            <button class="btn btn-secondary btn-block" city-name="london">London</button>
+            <button class="btn btn-secondary btn-block" city-name="montreal">Montreal</button>
+            <button class="btn btn-secondary btn-block" city-name="calgary">Calgary</button>
+            <button class="btn btn-secondary btn-block" city-name="vancouver">Vancouver</button>
+            <button class="btn btn-secondary btn-block" city-name="winnipeg">Winnipeg</button>
+            <button class="btn btn-secondary btn-block" city-name="halifax">Halifax</button>
+            <button class="btn btn-secondary btn-block" city-name="edmonton">Edmonton</button>
         </div>
     </div>
 
     <!--Weather information shown here-->
-    <div class="col-12 col-md-9">
+    <div class="col-12 col-md-10">
         <!--Weather for that city-->
         <div class="city-card">
-            <h2 id="city-name">Search Weather for your city!</h2>
-            <div id="currentTime"></div>
+            <div id="datetime">
+            <h2 id="city-name">Search Weather for your city! </h2>
+            <h2 id="currentTime"></h2>
             <img class="icon"></img>
+            </div>
             <p class="temp">Temp: </p> 
             <br><br>
             <p class="wind">Wind: </p>
             <br><br>
             <p class="humid">Humidity: </p>
             <br><br>
-            <p id="uv">UV Index: </p>
+            <p class="col-4 col-md-1" id="uv">UV Index: </p>
         </div>
         <!--5 Day Forecast-->
         <div>
+            <h2>5-day Forecast</h3>
             <div class="card">
                 <h3 class="card-header"></h3>
                 <img class="icon"></img>
