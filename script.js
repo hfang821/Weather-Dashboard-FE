@@ -52,12 +52,20 @@ var displayWeather = function(weatherInfo, city) {
     if(weatherInfo.current.uvi<2) {
         uvEl.textContent = "UV Index: " + weatherInfo.current.uvi;
         uvEl.classList.add('favorable');
+        //if(uvEl.classList.includes('moderate') || uvEl.classList.includes('severe')){
+            uvEl.classList.remove('moderate');
+            uvEl.classList.remove('severe');
+        
     } else if (weatherInfo.current.uvi<5) {
         uvEl.textContent = "UV Index: " + weatherInfo.current.uvi;
         uvEl.classList.add('moderate');
+        uvEl.classList.remove('favorable');
+        uvEl.classList.remove('severe');
     } else {
         uvEl.textContent = "UV Index: " + weatherInfo.current.uvi;
         uvEl.classList.add('severe');
+        uvEl.classList.remove('moderate');
+        uvEl.classList.remove('favorable');
     }
    
 
