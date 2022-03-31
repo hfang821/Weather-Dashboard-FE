@@ -10,11 +10,11 @@ var forecastDateEl = document.querySelectorAll(".card-header");
 var iconEl = document.querySelectorAll(".icon")
 var btnEl = document.querySelector("#citybtns");
 
-var current = moment().format('MMMM Do YYYY');
+var current = moment().format('MMMM Do YYYY, h:mm a');
 var cityArray = [];
 
 
-timeEl.innerHTML = "  (" + current + ")";
+timeEl.innerHTML = "  (" + current + " in EST)";
 
 var formSubmitHandler = function(event) {
 
