@@ -11,6 +11,7 @@ var iconEl = document.querySelectorAll(".icon")
 var btnEl = document.querySelector("#citybtns");
 
 var current = moment().format('MMMM Do YYYY');
+var cityArray = [];
 
 
 timeEl.innerHTML = "  (" + current + ")";
@@ -21,10 +22,12 @@ var formSubmitHandler = function(event) {
 
     //get value from the input element
     var cityName = cityInputEl.value.trim().toLowerCase();
+  
 
     for (let i=0; i<cities.length; i++){
         if(cityName===cities[i].name) {
             getWeather(cities[i].longitude, cities[i].latitude, cityName);
+            addCities(cityName);
         }
     }
 
@@ -37,7 +40,9 @@ var getWeather = function(long,lat,name){
     fetch(apiUrl).then(function(response) {
         if(response.ok){
             response.json().then(function(data){
+                console.log(data);
                 displayWeather(data,name);
+            
             });
         } else {
             alert('Please enter the correct city name.');
@@ -67,14 +72,16 @@ var displayWeather = function(weatherInfo, city) {
         uvEl.classList.remove('moderate');
         uvEl.classList.remove('favorable');
     }
-   
+    tempEl[0].textContent = "Temp: " + weatherInfo.current.temp + " ° C";
+    windEl[0].textContent = "Wind: " + weatherInfo.current.wind_speed + " m/s";
+    humidEl[0].textContent =  "Humidity: " + weatherInfo.current.humidity + " %";
 
     //5-day forecast data
     for(let i=0; i<forecastDateEl.length; i++){
         forecastDateEl[i].innerHTML= moment().add(i+1, 'days').format('MM/D/YYYY');
     }
    
-    for(let i=0; i<iconEl.length; i++){
+    for(let i=1; i<iconEl.length; i++){
     //display icons for the weather
         iconEl[i].src = "http://openweathermap.org/img/wn/"+ weatherInfo.daily[i].weather[0].icon + ".png"; 
         tempEl[i].textContent = "Temp: " + weatherInfo.daily[i].temp.day + " ° C";
@@ -101,6 +108,30 @@ var buttonClickHandler = function(event) {
     }
 }
 
+//triggers when search button is clicked
+var addCities = function (city){
+
+    cityArray.push(city);
+
+    console.log(cityArray);
+
+    let searchedCity = document.createElement("button");
+    searchedCity.innerHTML =  city.charAt(0).toUpperCase() + city.slice(1);
+    searchedCity.classList.add('btn', 'btn-secondary', 'btn-block');
+    searchedCity.setAttribute('city-name', city);
+    btnEl.appendChild(searchedCity);
+
+    window.localStorage.setItem("city", JSON.stringify(cityArray));
+    
+}
+
 
 searchEl.addEventListener("submit", formSubmitHandler);
 btnEl.addEventListener("click", buttonClickHandler);
+//when the window reloads
+window.addEventListener("load", function() {
+    var cities = JSON.parse(window.localStorage.getItem("city"));
+    for(let i=0; i<cities.length; i++) {
+        addCities(cities[i]);
+    }
+});
