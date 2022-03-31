@@ -72,6 +72,7 @@ var displayWeather = function(weatherInfo, city) {
         uvEl.classList.remove('moderate');
         uvEl.classList.remove('favorable');
     }
+    iconEl[0].src = "http://openweathermap.org/img/wn/"+ weatherInfo.current.weather[0].icon + ".png";
     tempEl[0].textContent = "Temp: " + weatherInfo.current.temp + " ° C";
     windEl[0].textContent = "Wind: " + weatherInfo.current.wind_speed + " m/s";
     humidEl[0].textContent =  "Humidity: " + weatherInfo.current.humidity + " %";
@@ -112,8 +113,6 @@ var buttonClickHandler = function(event) {
 var addCities = function (city){
 
     cityArray.push(city);
-
-    console.log(cityArray);
 
     let searchedCity = document.createElement("button");
     searchedCity.innerHTML =  city.charAt(0).toUpperCase() + city.slice(1);
