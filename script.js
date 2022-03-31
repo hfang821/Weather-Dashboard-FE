@@ -31,6 +31,9 @@ var formSubmitHandler = function(event) {
         }
     }
 
+    cityInputEl.value = '';
+
+
 };
 
 var getWeather = function(long,lat,name){
