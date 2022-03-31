@@ -14,7 +14,7 @@ var current = moment().format('MMMM Do YYYY, h:mm a');
 var cityArray = [];
 
 
-timeEl.innerHTML = "  (" + current + " in EST)";
+timeEl.innerHTML = "  (" + current + " in your timezone!)";
 
 var formSubmitHandler = function(event) {
 
