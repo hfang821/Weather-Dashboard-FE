@@ -29,12 +29,12 @@ MacOS Users:
 Coming Soon!
 
 ## How to Use:
-1. Once in the webpage, click any cityname button to generate weather data for that city.
+1. All the history searches will be stored in this section, you can check back the weather conditions of these cities by clicking these buttons.
 ![image](https://user-images.githubusercontent.com/95199209/160665001-8f0ba48c-cba4-4a83-b5a2-12b3464c0ec5.png)
 
 
 
-2. OR: Enter the cityname in the textbox to search for any city you want to search!
+2. OR: You can Enter the cityname in the textbox to search for any city you want to search!
 ![image](https://user-images.githubusercontent.com/95199209/160665212-f4afbffe-8b95-439f-8a74-6c4e6d34861d.png)
 
 Note: This website does not contain all the cities around the globe as the database is limited to the longitutde and lattitude information stored in the citylist.js file.
