@@ -1,7 +1,7 @@
 # Weather-Dashboard
 
 ## Link to the Deployed Application:
-https://hfang821.github.io/Weather-Dashboard/ 
+https://hfang821.github.io/Weather-Dashboard-FE/
 
 ## Description:
 
